@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商務形象網站 | 專業開發解決方案</title>
+    <link rel="stylesheet" href="01.css">
+    <script src="01.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">商業 Logo</div>
+            <ul>
+                <li><a href="#about">關於我們</a></li>
+                <li><a href="#services">服務項目</a></li>
+                <li><a href="#portfolio">案例展示</a></li>
+                <li><a href="#contact">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>用技術驅動商業價值</h1>
+            <p>專注於高效能、低調專業的數位品牌轉型。</p>
+            <button>開始諮詢</button>
+        </section>
+
+        <section id="services">
+                    <h2 style="text-align: center;">核心服務方案</h2>
+            <div class="services-container">
+                <div class="service-card">
+                    <h3>商務形象設計</h3>
+                    <p>建立具備信任感的品牌第一印象，提升企業數位價值。</p>
+                </div>
+                <div class="service-card">
+                    <h3>高效能網頁開發</h3>
+                    <p>採用現代框架，確保網站極速加載與絕佳的 SEO 表現。</p>
+                </div>
+                <div class="service-card">
+                    <h3>資安維護與優化</h3>
+                    <p>針對中小企業提供網站防護建議，降低資安風險。</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" style="padding: 80px 10%; background: white;">
+            <h2 style="text-align: center; margin-bottom: 40px;">與我們聯繫</h2>
+            <form id="contact-form" style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
+                <div class="form-group">
+                    <label>您的姓名</label>
+                    <input type="text" id="name" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+                <div class="form-group">
+                    <label>電子郵件</label>
+                    <input type="email" id="email" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;">
+                </div>
+                <div class="form-group">
+                    <label>需求描述</label>
+                    <textarea id="message" rows="5" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+                </div>
+                <button type="submit" style="background: var(--primary-color); color: white; padding: 15px; border: none; border-radius: 5px; cursor: pointer;">
+                    送出訊息
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p style="text-align: center;">&copy; 2026 專業開發者. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

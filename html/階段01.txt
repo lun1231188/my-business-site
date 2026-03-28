@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商務形象網站 | 專業開發解決方案</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">商業 Logo</div>
+            <ul>
+                <li><a href="#about">關於我們</a></li>
+                <li><a href="#services">服務項目</a></li>
+                <li><a href="#portfolio">案例展示</a></li>
+                <li><a href="#contact">聯絡我們</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>用技術驅動商業價值</h1>
+            <p>專注於高效能、低調專業的數位品牌轉型。</p>
+            <button>開始諮詢</button>
+        </section>
+
+        <section id="services">
+            <h2>我們的服務</h2>
+            <div class="service-item">
+                <h3>網頁開發</h3>
+                <p>打造極速載入的品牌門面。</p>
+            </div>
+            <div class="service-item">
+                <h3>資安優化</h3>
+                <p>保護您的商業資料安全無虞。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 專業開發者. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
