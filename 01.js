@@ -1,24 +1,31 @@
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault(); // 防止頁面重新整理
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-
-    // 簡單的驗證邏輯
-    if (name.length < 2){
-        alert("請輸入正確的姓名");
-        return ;
-    }
-
-    // 模擬送出成功的反饋
-    const btn = e.target.querySelector('button');
-    btn.innerText = "傳送中...";
+    const btn = event.target.querySelector('button');
+    const originalText = btn.innerText;
+    
+    // 1. 防止重複點擊 (專業細節)
+    btn.innerText = '傳送中...';
     btn.disabled = true;
 
-    setTimeout(() => {
-        alert(`謝謝您，${name}！我們已收到您的訊息，將儘速回覆至 ${email}。`);
-        btn.innerText = "送出訊息";
-        btn.disabled = false;
-        e.target.reset(); // 清空表單
-    }, 1500);
+    // 2. 準備要寄出的資料 (名稱要跟 EmailJS 後台 Template 一樣)
+    const templateParams = {
+        user_name: document.getElementById('name').value,
+        user_email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+    };
+
+    // 3. 正式寄出
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        .then(function() {
+            alert('感謝您的聯絡！訊息已成功傳送。');
+            event.target.reset(); // 清空表單
+        }, function(error) {
+            alert('傳送失敗，請檢查網路或稍後再試：' + JSON.stringify(error));
+        })
+        .finally(() => {
+            // 4. 恢復按鈕狀態
+            btn.innerText = originalText;
+            btn.disabled = false;
+        });
 });
