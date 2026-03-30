@@ -17,7 +17,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     };
 
     // 3. 正式寄出
-    emailjs.send(serviceID, templateID, templateParams)
+    emailjs.send('serviceID', 'templateID', templateParams)
         .then(function() {
             alert('感謝您的聯絡！訊息已成功傳送。');
             event.target.reset(); // 清空表單
