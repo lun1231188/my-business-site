@@ -3,7 +3,8 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 
     const btn = event.target.querySelector('button');
     const originalText = btn.innerText;
-    
+    const serviceID = 'service_bul995p'; 
+    const templateID = '-zpWn6AgvO-SIB-La';
     // 1. 防止重複點擊 (專業細節)
     btn.innerText = '傳送中...';
     btn.disabled = true;
@@ -16,7 +17,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     };
 
     // 3. 正式寄出
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+    emailjs.send('serviceID', 'templateID', templateParams)
         .then(function() {
             alert('感謝您的聯絡！訊息已成功傳送。');
             event.target.reset(); // 清空表單
