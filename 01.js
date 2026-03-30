@@ -4,7 +4,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const btn = event.target.querySelector('button');
     const originalText = btn.innerText;
     const serviceID = 'service_bul995p'; 
-    const templateID = 'template_xtg604a';
+    const templateID = 'template_ppc0ynr';
     // 1. 防止重複點擊 (專業細節)
     btn.innerText = '傳送中...';
     btn.disabled = true;
