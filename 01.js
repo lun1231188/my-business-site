@@ -30,3 +30,12 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             btn.disabled = false;
         });
 });
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    // 當頁面往下滑動超過 50px 時，加入 scrolled 類別
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
