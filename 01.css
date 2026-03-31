@@ -1,7 +1,13 @@
 html {
     scroll-behavior: smooth;
 }
-
+header {
+    position: sticky;  /* 關鍵屬性 */
+    top: 0;           /* 固定在距離頂部 0 的位置 */
+    z-index: 1000;    /* 確保導覽列永遠在最上層，不會被下方內容蓋住 */
+    background: white; /* 記得給背景色，否則滾動時下方文字會透上來 */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* 加入淡淡的陰影提升質感 */
+}
 /* 為了避免點擊導覽列後標題被擋住，給每個 section 加個位移 */
 section {
     scroll-margin-top: 80px; 
